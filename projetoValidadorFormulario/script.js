@@ -79,3 +79,5 @@ function senha(input){
    }
 }
 
+function EnviarDados(){ if(document.getElementById("msgNome").innerHTML == "Nome válido" && document.getElementById("MensagemEmail").innerHTML == "Email válido." && document.getElementById("msgSenha").innerHTML == "Senha Válida"){
+    document.getElementById("Form").action = "sucesso.html"; } }
