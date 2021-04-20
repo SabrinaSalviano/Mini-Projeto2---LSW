@@ -14,7 +14,7 @@
         <div class="rightside">
             <h1>Crie uma conta</h1>
 
-            <form method="POST" action="sucesso.html" class="validator">
+            <form id="Form"  method="POST" action="" class="validator">
                 <label>
                     Seu nome:<br/>
                      <div id="msgNome"></div>
@@ -22,7 +22,8 @@
                 </label>
                 <label>
                     Seu e-mail:<br/>
-                    <input type="text" name="email" data-rules="required|email" />
+                    <div id="MensagemEmail"></div>
+                    <input onblur="isEmail(this)" type="text" name="email" data-rules="required|min=1" />
                 </label>
                 <label>
                     Sua senha:<br/>
@@ -30,7 +31,7 @@
                     <input onblur="senha(this)" type="password" name="password" data-rules="min=4" />
                 </label>
                 <label>
-                    <input type="submit" value="Cadastrar" />
+                    <input type="submit" onclick="EnviarDados()" value="Cadastrar" />
                 </label>
             </form>
 
